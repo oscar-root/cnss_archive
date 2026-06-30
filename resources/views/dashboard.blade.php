@@ -111,6 +111,7 @@
             </div>
 
             <!-- SECTION 4 : DERNIERS MOUVEMENTS -->
+             @if(auth()->user()->isSecretaire() || auth()->user()->isChefDeService() || auth()->user()->isDirecteur() )
             <div class="bg-white rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden">
                 <div class="px-8 py-5 border-b border-gray-50 bg-gray-50/50 flex justify-between items-center">
                     <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">Flux de travail récent</h4>
@@ -148,6 +149,7 @@
                     </table>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 
